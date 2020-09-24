@@ -7,13 +7,13 @@ public class Main {
 
         //此处输入不计算时间的初始化代码
 
-        Solution7 solution = new Solution7();
+        Solution9 solution = new Solution9();
 
         new RunTime(() -> {
             //此处输入需要计算运行时间的代码
 
-            int reverse = solution.reverse(1534236469);
-            //System.out.println(reverse);
+            boolean palindrome = solution.isPalindrome(1001);
+            System.out.println(palindrome);
 
         }).start(10).printMs();
 
