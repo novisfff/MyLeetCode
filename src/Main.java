@@ -7,13 +7,13 @@ public class Main {
 
         //此处输入不计算时间的初始化代码
 
-        Solution9 solution = new Solution9();
+        Solution13 solution = new Solution13();
 
         new RunTime(() -> {
             //此处输入需要计算运行时间的代码
 
-            boolean palindrome = solution.isPalindrome(1001);
-            System.out.println(palindrome);
+            int toInt = solution.romanToInt("MCMXCIV");
+            System.out.println(toInt);
 
         }).start(10).printMs();
 
