@@ -7,12 +7,12 @@ public class Main {
 
         //此处输入不计算时间的初始化代码
 
-        Solution3 solution = new Solution3();
+        Solution5 solution = new Solution5();
         new RunTime(() -> {
             //此处输入需要计算运行时间的代码
 
-            int length = solution.lengthOfLongestSubstring("abcabcbb");
-            System.out.println(length);
+            String s = solution.longestPalindrome("ccc");
+            System.out.println(s);
 
         }).start(10).printMs();
 
