@@ -12,6 +12,22 @@ public class Solution19 {
      * @return
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode superHead = new ListNode(0, head); //先指向head前一个Node
+        ListNode targetListNode = superHead;
+        ListNode currentListNode = head;
+        int index = 1;
+        while (currentListNode != null) {
+            if (index - n > 0) {
+                targetListNode = targetListNode.next;
+            }
+            currentListNode = currentListNode.next;
+            index++;
+        }
+        targetListNode.next = targetListNode.next.next;
+        return superHead.next;
+    }
+
+    public ListNode removeNthFromEnd2(ListNode head, int n) {
         ListNode targetListNode = null;
         ListNode currentListNode = head;
         int index = 0;
