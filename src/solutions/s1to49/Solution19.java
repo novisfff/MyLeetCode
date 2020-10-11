@@ -38,4 +38,5 @@ public class Solution19 {
         solution19.removeNthFromEnd(listNode, 2);
     }
 
+
 }
