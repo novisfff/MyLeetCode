@@ -18,6 +18,22 @@ public class Solution26 {
      * @return
      */
     public int removeDuplicates(int[] nums) {
+        if(nums == null || nums.length == 0) {
+            return 0;
+        }
+        int p1 = 0; //p1指针即可表示长度，无需再计算长度
+        int p2 = 0;
+        while(p2 < nums.length - 1) {
+            p2++;
+            if(nums[p2] != nums[p1]) {
+                p1++;
+                nums[p1] = nums[p2];
+            }
+        }
+        return p1 + 1;
+    }
+
+    /*public int removeDuplicates(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
         }
@@ -34,6 +50,6 @@ public class Solution26 {
             }
         }
         return length;
-    }
+    }*/
 
 }
